@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="TestNG">
+    <test name="TestNG сценарии"   >
+        <classes>
+            <class name="org.example.SimpleTest" />
+            <class name="org.example.ComplexTest" />
+        </classes>
+    </test>
+</suite>
