@@ -4,8 +4,8 @@
 <suite name="TestNG">
     <test name="TestNG сценарии"   >
         <classes>
+            <class name="org.example.ParamTest" />
             <class name="org.example.SimpleTest" />
-            <class name="org.example.ComplexTest" />
         </classes>
     </test>
 </suite>

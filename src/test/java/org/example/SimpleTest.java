@@ -2,20 +2,48 @@ package org.example;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.testng.Assert;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 public class SimpleTest {
     private static final Logger LOG = LoggerFactory.getLogger(SimpleTest.class);
 
-    @Test
-    public void simpleTest1(){
-        LOG.info("Test complete!");
+    @BeforeClass
+    public void beforeSimpleTestClass(){
+        LOG.info("Before class SimpleTest");
     }
 
-    @Test(enabled = false)
-    public void simpleTest2(){
-        LOG.info("Test complete!");
-        Assert.fail();
+    @AfterClass
+    public void afterSimpleTestClass(){
+        LOG.info("After class SimpleTest");
+    }
+
+    @BeforeMethod
+    public void beforeMethod(){
+        LOG.info("Before SimpleTest method");
+    }
+
+    @AfterMethod
+    public void afterMethod(){
+        LOG.info("After SimpleTest method");
+    }
+
+    @BeforeSuite
+    public void beforeSuite(){
+        LOG.info("Before suite");
+    }
+
+    @Test
+    public void SimpleTest1(){
+        LOG.info("SimpleTest1 complete!");
+    }
+
+    @Test
+    public void SimpleTest2(){
+        LOG.info("SimpleTest2 complete!");
+    }
+
+    @AfterSuite
+    public void afterSuite(){
+        LOG.info("After suite");
     }
 }
